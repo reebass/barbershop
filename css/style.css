@@ -171,9 +171,19 @@ img {
 /* HEADER STYLE */
 
 .header {
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
+  position: fixed;
+  /* background-color: transparent; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  transition: background-color 300ms ease-in, backdrop-filter 300ms;
+}
+
+.no-transparency {
+  background-color: hsla(0, 0%, 19%, 0.8);
+  backdrop-filter: blur(4px);
 }
 
 .header-container {
@@ -223,30 +233,61 @@ img {
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
-  height: 680px;
 
-  background-image: linear-gradient(to right, #ffffff 155px, rgba(25, 28, 38, 0.2) 155px),
-    url(../img/hero/1.jpg);
-  background-position: top right, top right;
+  background-image: url(../img/hero/1.jpg);
+  background-position: right center;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .container-hero {
   display: flex;
-  height: 680px;
+}
+
+.hero-left-side {
+  display: flex;
+  align-items: flex-end;
+  flex-basis: 100px;
+  max-width: 100px;
 }
 
 .hero-list {
   display: flex;
-  transform: rotate(-90deg);
   align-items: center;
+  gap: 40px;
+
+  transform: rotate(-90deg) translateY(27px) translateX(-15px);
+  transform-origin: left top;
 }
 
-.hero-warp {
-  margin-left: 158px;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: 324px;
+.hero-link {
+  display: block;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
+}
+
+.hero-link:hover,
+.hero-link:focus {
+  color: var(--accent-text-color);
+}
+
+.hero-list::before {
+  display: block;
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: var(--main-text-color);
+  margin-left: 40px;
+}
+
+.hero-right-side {
+  position: relative;
+  flex-grow: 1;
+  padding-top: 272px;
+  padding-bottom: 206px;
+  padding-left: 100px;
 }
 
 .hero-title {
@@ -266,12 +307,68 @@ img {
   line-height: calc(30 / 18);
   letter-spacing: 0.02em;
   color: var(--dark-mode-text);
+  width: 500px;
 }
+
+/* slider elements */
 
 .slider-controls {
   display: flex;
-  align-items: flex-end;
-  margin-bottom: 40px;
+  align-items: center;
+  gap: 26px;
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+}
+
+.slider-btn {
+  width: 60px;
+  height: 24px;
+  padding: 0;
+  padding-bottom: 8px;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  text-align: right;
+  letter-spacing: 0.1em;
+
+  color: var(--btn-text-color);
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--btn-text-color);
+  cursor: pointer;
+}
+
+.slider-btn.disabled {
+  text-align: left;
+
+  color: var(--dark-mode-uppertitle);
+  border-color: var(--dark-mode-uppertitle);
+}
+
+.pagination {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.pagination-item {
+  width: 8px;
+  height: 2px;
+  background-color: var(--dark-mode-text);
+  margin-bottom: 12px;
+  margin-left: auto;
+}
+
+.pagination-item:last-child {
+  margin-bottom: 0;
+}
+
+.pagination-item.active {
+  width: 18px;
+  background-color: var(--btn-text-color);
 }
 
 /* -------------------------------------------- */

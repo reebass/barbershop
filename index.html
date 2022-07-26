@@ -19,7 +19,7 @@
 <body>
   <!-- Header -->
 
-  <header class="header section-dark">
+  <header class="header" data-header>
     <div class="header-container container">
       <a class="header-logo" href="./index.html"><img class="logo-img" src="./img/header/Logo.svg"
           alt="логотип BarberShop" width="69px" height="56px" />
@@ -49,8 +49,9 @@
   <main>
     <!-- Section Hero -->
 
-    <section class="hero section-dark">
+    <section class="hero">
       <div class="container container-hero">
+        <div class="hero-left-side">
         <ul class="hero-list list">
           <li lang="en" class="hero-item">
             <a href="" class="hero-link link" target="_blank" rel="noopener noreferrer"> Youtobe</a>
@@ -59,28 +60,30 @@
             <a href="" class="hero-link link" target="_blank" rel="noopener noreferrer">Instagram</a>
           </li>
         </ul>
-        <div class="hero-warp">
+        </div>
+        <div class="hero-right-side">
           <p lang="en" class="hero-uppertitle uppertitle uppertitle-mode-dark">
             A hair salon for men in Kyiv
           </p>
           <h1 lang="en" class="hero-title">BarberShop</h1>
           <p class="hero-slogan">
-            Мы эксперты в модных мужских стрижках.<br>Работаем быстро, осторожно и со вкусом.
+            Мы эксперты в модных мужских стрижках. Работаем&nbsp;быстро, осторожно и со вкусом.
           </p>
-        </div>
+        
         <div class="pagination">
-          <div class="pagination-item"></div>
+          <div class="pagination-item active"></div>
           <div class="pagination-item"></div>
           <div class="pagination-item"></div>
         </div>
         <ul class="slider-controls list">
           <li class="slider-item">
-            <button class="slider-btn" type="button">Назад</button>
+            <button class="slider-btn disabled" type="button">Назад</button>
           </li>
           <li class="slider-item">
             <button class="slider-btn" type="button">Вперед</button>
           </li>
         </ul>
+        </div>
       </div>
     </section>
 
@@ -383,6 +386,8 @@
     </div>
 
   </section>
+  <script src="./js/header-scroll.js"></script>
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
