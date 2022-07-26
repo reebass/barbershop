@@ -171,7 +171,9 @@ img {
 /* HEADER STYLE */
 
 .header {
-  background-color: var(--dark-bg-color);
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header-container {
@@ -210,6 +212,66 @@ img {
 .header-link:focus,
 .header-link-current {
   color: var(--accent-text-color);
+}
+
+/* -------------------------------------------- */
+
+/* HERO SECTION */
+
+.hero {
+  /* outline: 1px solid red; */
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 680px;
+
+  background-image: linear-gradient(to right, #ffffff 155px, rgba(25, 28, 38, 0.2) 155px),
+    url(../img/hero/1.jpg);
+  background-position: top right, top right;
+  background-repeat: no-repeat;
+}
+
+.container-hero {
+  display: flex;
+  height: 680px;
+}
+
+.hero-list {
+  display: flex;
+  transform: rotate(-90deg);
+  align-items: center;
+}
+
+.hero-warp {
+  margin-left: 158px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 324px;
+}
+
+.hero-title {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: calc(85 / 72);
+  letter-spacing: 0.05em;
+  color: var(--btn-text-color);
+  margin-bottom: 20px;
+}
+
+.hero-slogan {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: var(--dark-mode-text);
+}
+
+.slider-controls {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 40px;
 }
 
 /* -------------------------------------------- */
