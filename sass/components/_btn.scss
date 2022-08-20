@@ -1,0 +1,31 @@
+.btn {
+    display: block;
+    min-width: 160px;
+    max-width: 200px;
+    min-height: 40px;
+    padding: 11px 29px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: calc(16 / 12);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid var(--accent-text-color);
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.btn-mode-light {
+    color: var(--main-text-color);
+}
+
+.btn-mode-dark {
+    color: var(--btn-text-color);
+}
+
+.btn:hover,
+.btn:focus {
+    color: var(--btn-text-color);
+    background-color: var(--accent-text-color);
+}

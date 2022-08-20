@@ -1,0 +1,13 @@
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--indent);
+}
+
+.card-item-team {
+    flex-basis: calc((100% - var(--indent)) * (var(--item-team) - 1)) / var(--item-team);
+}
+
+.card-item-portfolio {
+    flex-basis: calc((100% - var(--indent)) * (var(--item-portfolio) - 1)) / var(--item-portfolio);
+}

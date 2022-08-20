@@ -1,0 +1,30 @@
+.team {
+    padding-bottom: 100px;
+}
+
+.team-title {
+    margin-bottom: 44px;
+}
+
+.team-wrap {
+    padding: 30px 5px;
+}
+
+.team-name {
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(25 / 18);
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.team-desc {
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(19 / 14);
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--accent-text-color);
+}

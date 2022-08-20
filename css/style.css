@@ -17,6 +17,9 @@
   --indent: 30px;
   --item-team: 3;
   --item-portfolio: 4;
+
+  --animation-fast: 250ms ease-in-out;
+  --animation-fast: 450ms ease-in-out;
 }
 
 /* -------------------------------------------- */
@@ -136,6 +139,7 @@ img {
 }
 
 .btn {
+  display: block;
   min-width: 160px;
   max-width: 200px;
   min-height: 40px;
@@ -627,12 +631,97 @@ img {
   display: flex;
 }
 
-.contacts-form,
-.contacts-group {
+.contacts-left-side,
+.contacts-right-side {
   flex-basis: 50%;
 }
 
-.contacts-group {
+.contacts-form-wrap {
+  display: flex;
+  gap: 30px;
+
+  margin-bottom: 44px;
+}
+
+.contacts-form-group {
+  position: relative;
+  flex-basis: calc((100% - 30px) / 2);
+}
+
+.contacts-form-input,
+.contacts-form-massage {
+  display: block;
+  width: 100%;
+
+  color: var(--btn-text-color);
+
+  background-color: transparent;
+  border: none;
+  outline: transparent;
+  border-bottom: 1px solid var(--dark-mode-uppertitle);
+}
+
+.contacts-form-input:focus,
+.contacts-form-input:not(:placeholder-shown),
+.contacts-form-massage:focus {
+  border-bottom: 1px solid var(--btn-text-color);
+}
+
+.contacts-form-input::placeholder {
+  color: transparent;
+  transition: var(--animation-fast);
+}
+
+.contacts-form-input:focus::placeholder {
+  color: var(--dark-mode-uppertitle);
+}
+
+.contacts-form-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: var(--dark-mode-uppertitle);
+  transition: transform var(--animation-fast), color var(--animation-fast);
+}
+
+.contacts-form-input:focus + .contacts-form-label,
+.contacts-form-input:not(:placeholder-shown) + .contacts-form-label,
+.contacts-form-massage:focus + .contacts-form-label,
+.contacts-form-massage:not(:placeholder-shown) + .contacts-form-label {
+  transform: scale(0.9) translateY(-25px);
+  color: var(--btn-text-color);
+}
+
+.contacts-form-notification {
+  display: none;
+}
+
+.contacts-form-massage {
+  max-height: 76px;
+  resize: none;
+}
+
+.contacts-form-massage::placeholder {
+  color: transparent;
+  transition: var(--animation-fast);
+}
+
+.contacts-form-massage:focus::placeholder {
+  color: var(--dark-mode-uppertitle);
+}
+
+.contacts-form-btn {
+  margin-top: 44px;
+}
+
+.contacts-right-side {
   padding-left: 100px;
 }
 
@@ -757,3 +846,7 @@ img {
   height: 1px;
   background-color: var(--main-text-color);
 }
+
+/* -------------------------------------------- */
+
+/* MOBILE MENU */

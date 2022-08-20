@@ -1,0 +1,23 @@
+:root {
+    /* Fonts style */
+    --main-fonts: 'Open Sans', sans-serif;
+    --second-fonts: 'Raleway', sans-serif;
+    /* Text color */
+    --main-text-color: #303030;
+    --accent-text-color: #ff6c00;
+    --btn-text-color: #ffffff;
+    --light-mode-text: #555555;
+    --dark-mode-text: #9da4bd;
+    --dark-mode-uppertitle: rgba(157, 164, 189, 0.6);
+
+    /* BG color */
+    --dark-bg-color: #191c26;
+    --light-bg-color: #f7f7f7;
+    /* Other */
+    --indent: 30px;
+    --item-team: 3;
+    --item-portfolio: 4;
+
+    --animation-fast: 250ms ease-in-out;
+    --animation-fast: 450ms ease-in-out;
+}

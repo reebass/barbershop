@@ -52,14 +52,14 @@
     <section class="hero">
       <div class="container container-hero">
         <div class="hero-left-side">
-        <ul class="hero-list list">
-          <li lang="en" class="hero-item">
-            <a href="" class="hero-link link" target="_blank" rel="noopener noreferrer"> Youtobe</a>
-          </li>
-          <li lang="en" class="hero-item">
-            <a href="" class="hero-link link" target="_blank" rel="noopener noreferrer">Instagram</a>
-          </li>
-        </ul>
+          <ul class="hero-list list">
+            <li lang="en" class="hero-item">
+              <a href="" class="hero-link link" target="_blank" rel="noopener noreferrer"> Youtobe</a>
+            </li>
+            <li lang="en" class="hero-item">
+              <a href="" class="hero-link link" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </li>
+          </ul>
         </div>
         <div class="hero-right-side">
           <p lang="en" class="hero-uppertitle uppertitle uppertitle-mode-dark">
@@ -69,20 +69,20 @@
           <p class="hero-slogan">
             Мы эксперты в модных мужских стрижках. Работаем&nbsp;быстро, осторожно и со вкусом.
           </p>
-        
-        <div class="pagination">
-          <div class="pagination-item active"></div>
-          <div class="pagination-item"></div>
-          <div class="pagination-item"></div>
-        </div>
-        <ul class="slider-controls list">
-          <li class="slider-item">
-            <button class="slider-btn disabled" type="button">Назад</button>
-          </li>
-          <li class="slider-item">
-            <button class="slider-btn" type="button">Вперед</button>
-          </li>
-        </ul>
+
+          <div class="pagination">
+            <div class="pagination-item active"></div>
+            <div class="pagination-item"></div>
+            <div class="pagination-item"></div>
+          </div>
+          <ul class="slider-controls list">
+            <li class="slider-item">
+              <button class="slider-btn disabled" type="button">Назад</button>
+            </li>
+            <li class="slider-item">
+              <button class="slider-btn" type="button">Вперед</button>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -322,23 +322,30 @@
 
     <section class="contacts section section-dark">
       <div class="container contacts-container">
-        <div class="contacts-form">
+        <div class="contacts-left-side">
           <h2 class="contacts-form-title title title-mode-dark">Онлайн-запись</h2>
-          <form>
-            <label for="">
-              <input type="text" />
+          <form class="contacts-form" name="contacts-form">
+            <div class="contacts-form-wrap">
+            <label class="contacts-form-group">
+              <input type="text" class="contacts-form-input" name="user-name" required minlength="3" placeholder="Antonio" />
+              <span class="contacts-form-label">имя*</span>
+              <span class="contacts-form-notification">Укажите минимум 3 символа</span>
             </label>
-            <label for="">
-              <input type="text" />
+            <label class="contacts-form-group">
+              <input type="tel" class="contacts-form-input" name="user-phone" required maxlength="12" placeholder="+38 097 123-45-67" />
+              <span class="contacts-form-label">телефон*</span>
+              <span class="contacts-form-notification">Укажите номер в формате +38 097 123-45-67</span>
             </label>
-            <label for="">
-              <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <label class="contacts-form-group">
+              <textarea class="contacts-form-massage" name="user-massage" rows="5" placeholder="Введите текст"></textarea>
+              <span class="contacts-form-label">сообщение</span>
             </label>
-            <button type="submit">отправить</button>
+            <button class="btn btn-mode-dark contacts-form-btn" type="submit">отправить</button>
           </form>
           </form>
         </div>
-        <div class="contacts-group">
+        <div class="contacts-right-side">
           <h2 class="contacts-title title title-mode-dark">Контакты</h2>
           <address class="contacts-address">
             <ul class="contacts-list list">
@@ -386,6 +393,22 @@
     </div>
 
   </section>
+  <div class="backdrop">
+    <div class="mobile-menu">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="" class="nav__link"></a></li>
+          <li class="nav__item"><a href="" class="nav__link"></a></li>
+          <li class="nav__item"><a href="" class="nav__link"></a></li>
+          <li class="nav__item"><a href="" class="nav__link"></a></li>
+        </ul>
+      </nav>
+      <a class="link header-link mobile-menu__phone" href="tel:+380441111111">+38 044 111 11 11</a>
+      <button class="btn mobile-menu__btn btn-mode-dark" type="button">Онлайн запись</button>
+
+    </div>
+  </div>
+
   <script src="./js/header-scroll.js"></script>
   <script src="./js/modal.js"></script>
 </body>
